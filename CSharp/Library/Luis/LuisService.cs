@@ -91,6 +91,8 @@ namespace Microsoft.Bot.Builder.Luis
             var sk = HttpUtility.UrlEncode(this.model.SubscriptionKey);
             var q = HttpUtility.UrlEncode(text);
 
+            //Unsere wichtige Änderung
+
             var builder = new UriBuilder(UriBase);
             builder.Query = $"id={id}&subscription-key={sk}&q={q}";
             return builder.Uri;
